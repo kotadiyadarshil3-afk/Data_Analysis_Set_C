@@ -296,8 +296,7 @@ rounding.
 
 ## 🎥 Working Video
 
-- **Video URL:** _\<paste your walkthrough video link here>_
-- **Duration:** _\<e.g. 8 minutes 30 seconds>_
+- **Video URL:** _https://drive.google.com/file/d/1kksZlB4tGKkg-doE_lHrawP4KPQcIxjU/view?usp=sharing_
 
 This video covers:
 - Project overview & business objective
