@@ -29,7 +29,7 @@ across all four.
 |---|---|
 | **Project Title** | Student Assessment Performance Analysis |
 | **Student Name** | Darshil Kotadiya |
-| **Student ID** | <add your ID> |
+| **Student ID** | _\<add your ID>_ |
 | **Assigned Set** | **Set C** |
 | **Institution** | Red & White Skill Education |
 
@@ -48,9 +48,53 @@ courses, and batches so that support can be targeted effectively.
 
 ---
 
+## 📈 Project Workflow
+
+```text
+Start
+   │
+   ▼
+Raw Data (assessments.csv + courses.csv)
+   │
+   ▼
+Data Cleaning
+   │  • Check data types
+   │  • Remove duplicate rows
+   │  • Left-join assessments ↔ courses
+   │  • Check for unmatched departments
+   ▼
+Derive pass_flag (score >= 50)
+   │
+   ├──────────────┬──────────────┬──────────────┐
+   ▼              ▼              ▼              ▼
+ SQL           Python          Excel         Power BI
+(setup.sql +  (main.ipynb)   (Raw → Clean   (Power_BI.pbix
+ Queries_.sql)                → Summary)     dashboard)
+   │              │              │              │
+   ▼              ▼              ▼              ▼
+S2_A_ / S2_B_  clean_data.csv  Summary sheet  Refreshed
+S2_C_ outputs  python_summary   KPIs/pivots    visuals
+               .csv + chart
+   │              │              │              │
+   └──────────────┴──────────────┴──────────────┘
+                        │
+                        ▼
+            Cross-Tool Reconciliation
+         (compare dept/course averages
+            across all four tools)
+                        │
+                        ▼
+            Findings & Recommendation
+                        │
+                        ▼
+                       End
+```
+
+---
+
 ## 📁 Project Folder Structure
 
-\`\`\`
+```
 Data-Analysis-Set-C/
 │
 ├── README.md                   # This file
@@ -70,7 +114,7 @@ Data-Analysis-Set-C/
 │
 ├── Mock_Practical_Excel.xlsx    # Excel workbook (Raw, Lookup, Clean, Summary sheets)
 └── Power_BI.pbix                # Power BI report & dashboard
-\`\`\`
+```
 
 ---
 
@@ -152,9 +196,9 @@ Data-Analysis-Set-C/
 |---|---|
 | Excel | Microsoft Excel (.xlsx) |
 | Power BI | Power BI Desktop (.pbix) |
-| SQL Engine | <name your engine, e.g. MySQL 8.0 / PostgreSQL 15 / SQLite 3> |
-| Python | <e.g. 3.11> |
-| Python packages | pandas <version>, numpy <version>, matplotlib <version> |
+| SQL Engine | _\<name your engine, e.g. MySQL 8.0 / PostgreSQL 15 / SQLite 3>_ |
+| Python | _\<e.g. 3.11>_ |
+| Python packages | pandas _\<version>_, numpy _\<version>_, matplotlib _\<version>_ |
 
 > Run `python --version` and `pip freeze | grep -E "pandas|numpy|matplotlib"` in your
 > environment and fill in the exact versions above.
@@ -177,11 +221,11 @@ Data-Analysis-Set-C/
 
 ## 🐍 Python Environment Setup & Run Instructions
 
-\`\`\`bash
+```bash
 pip install -r requirements.txt
 python -m jupyter nbconvert --to notebook --execute main.ipynb
 # or open main.ipynb and run all cells directly
-\`\`\`
+```
 
 Running `main.ipynb` will:
 - Load and clean `assessments.csv` + `courses.csv`
@@ -252,4 +296,33 @@ rounding.
 
 ## 🎥 Working Video
 
-- **Video URL:**
+- **Video URL:** _\<paste your walkthrough video link here>_
+- **Duration:** _\<e.g. 8 minutes 30 seconds>_
+
+This video covers:
+- Project overview & business objective
+- Dataset & cleaning walkthrough
+- SQL, Python, Excel, and Power BI results
+- Cross-tool reconciliation and final recommendation
+
+---
+
+## 📚 References
+
+_\<List any external code, tutorials, or resources used, or write "None" if all work is original.>_
+
+---
+
+## ✍️ Authorship Declaration
+
+> All work in this repository is my own except where cited.
+
+**Signed:** Darshil Kotadiya
+
+<div align="center">
+
+---
+
+## ⭐ Thank You for Reviewing This Project ⭐
+
+</div>
